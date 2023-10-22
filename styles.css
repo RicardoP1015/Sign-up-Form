@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: black;
+}
+
 img {
     width: 100%;
     max-width: 100%;
@@ -17,6 +21,10 @@ h1 {
     text-align: center;
     font-size: 90px;
     margin-bottom: 20px;
+    background: linear-gradient(356deg, #800043fc, #7500ffed, transparent);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .container {
@@ -27,7 +35,19 @@ h1 {
 .img-wrapper {
     width: 140vw;
     height: 100vh;
+    position: relative;
 }
+
+.credit {
+    position: absolute;
+    left: 13px;
+    bottom: 6px;
+    color: white;
+    padding: 10px;
+    background: linear-gradient(263deg, #000000d1,#000000d6, #28282800);
+}
+
+.credit a {color: purple;}
 
 .form-container {
     display: flex;
@@ -79,6 +99,21 @@ input[type="password"] {
     background-color: rgba(230, 230, 230, 0.267);
     color: white;
     padding: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border: 2px solid purple;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="tel"]:valid,
+input[type="password"]:valid {
+    border: 2px solid green;
 }
 
 button[type="submit"] {
